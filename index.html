@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <title>Latent Heat of Fusion</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"
+        integrity="sha256-wS9gmOZBqsqWxgIVgA8Y9WcQOa7PgSIX+rPA0VL2rbQ=" crossorigin="anonymous"></script>
+    <script src="./calculate.js"></script>
+    <script src="./accessibility.js"></script>
+</head>
+
+<body class="disable-dbl-tap-zoom">
+    <div id="wrapper" style="font-family: 'Myriad-pro-bold';">
+        <div class="startBox" id="boxy">
+            <img id="pop1" src="./Images/Pop1.png" alt="">
+            <!-- <img id="circle" src="./Images/Pop_circle.png"> -->
+            <img id="pop2" src="./Images/pop_on.png" alt="">
+        </div>
+        <div class="closeBox" id="boxyClose">
+            <img id="popoff" src="./Images/pop_off.png" alt="">
+            <img id="popWait" src="./Images/pop_wait.png" alt="">
+        </div>
+        <span id="countdown"></span>
+        <div class="container-fluid">
+            <div class="top-show">
+                
+                <img src="./Images/Header_name.png" />
+                <div class="top-buttons">
+                    <span id="heading">量度冰的熔解比潛熱</span>
+                    <img class="top-b" tabindex="1" src="./Images/10004.png" onclick="openIntroduction()"
+                        onmouseenter="onHoverIntro()" onmouseleave="offHoverIntro()" />
+                    <img class="top-b1" tabindex="2" src="./Images/10006.png" onclick="document.location='./S03-e32.doc'" ,
+                        onmouseenter="onHoverExe()" onmouseleave="offHoverExe()" />
+                </div>
+            </div>
+
+            <div id="dialogIntro" class="intro-container hideThis">
+                <img class="pop" src="./Images/popup.png" usemap="#image-map">
+                <map name="image-map">
+                    <area coords="998,62,920,36" shape="rect" onclick="closeIntroduction()" tabindex="7"
+                        onmouseenter="onHoverpopup()" onmouseleave="offHoverpopup()" style="outline: none;">
+                </map>
+                <span id="intro-text">程式簡介</span>
+                <span id="intro-text1">這個模擬程式是一個用來量度冰的熔解比潛熱 lf 的虛擬實驗。</span>
+                <span id="intro-text2">透過這個程式，可以熟習實驗的步驟，並可用所得的數據估算冰</span>
+                <span id="intro-text3">的熔解比潛熱。</span>
+                <img class="intro-image" src="./Images/intro.png">
+               
+            </div>
+
+            <div class="activity___top" id="activityTop">
+                <img class="timer" src="./Images/Timer_off.png">
+                <div id="timerText">
+                    <span id="sec">00:00:00
+                    </span>
+                    <span id="milisec">
+                    </span>
+                </div>
+                <img class = "line1" src="./Images/1.png" alt="">
+                <img class="line2" src="./Images/2.png" alt="">
+                <img class="machine" id="machineLooping" src="./Images/Machine.png">
+                <div id="machineText">23456 J</div>
+                <img class="beaker1" id="be1" src="./Images/B1_outHeat_outwire.png">
+               
+                <div id="B1Text">0 g</div>
+                <img class="beaker2" src="./Images/B1.png">
+                <div id="B2Text">0 g</div>
+                <img class="ice1" id="shake1" src="">
+                <img class="ice2" id="shake2" src="">
+                <span class="textT">計時器</span>
+                <span class="textJ1">焦耳計</span>
+                <span class="textJ2">接駁至電源</span>
+                <span class="textB1">浸沒式電熱器</span>
+                <span class="textB2">熔解中的碎冰</span>
+                <span class="textB3">燒杯  <span style="font-style: italic;">A</span></span>
+                <span class="textB4">燒杯  <span style="font-style: italic;">B</span></span>
+                <span class="textB5">電子秤</span>
+                <div class="waterDropping1" id="d1">
+                        <img id="drop1" src="./Images/Drop.png" alt="">
+                </div>
+                <div class="waterDropping2" id="d2">
+                    <img id="drop2" src="./Images/Drop.png" alt="">
+                </div>
+                <div class='water'>
+                    <img id="waterlevel" src="" alt="" width="105px">
+                </div>
+                <div class='waterlevelBreakerB'>
+                    <img id="waterlevelB" src="" alt="" width="105px">
+                </div>
+                
+            </div>
+
+            <div class="activity___bottom">
+                <div class="about">焦耳計的最初讀數 = <span class="lowerValues1" id="initialJ"> </span><span
+                        class="units"> J</span></div>
+                <div class="about">燒杯 <span style="font-style: italic;">A </span> 中水的質量 = <span class="lowerValues" id="massB1"> </span><span
+                        class="units"> kg</span></div>
+                <div class='mask' id='masks'></div>
+                <input type="image" class="powerOnBtn" tabindex="3" value="power on" id="powerOn" src="./Images/Power_on.png" onmouseenter="onHoverPowerOn()"
+                    onmouseleave="offHoverPowerOn()" onclick="powerOn()">
+                <img class="powerOffBtn" tabindex="6" id="powerOff" src="./Images/Power_off.png" onmouseenter="onHoverPowerOff()"
+                    onmouseleave="offHoverPowerOff()" onclick="powerOff()">
+                <div class="about">焦耳計的最後讀數 &nbsp; = <span class="lowerValues1" id="finalJ"> </span><span
+                        class="units"> J</span></div>
+                <div class="about">燒杯 <span style="font-style: italic;">B </span> 中水的質量  = <span class="lowerValues" id="massB2"> </span><span
+                        class="units">kg</span></div>
+                <img class="resetBtn" tabindex="4" src="./Images/Reset.png" onmouseenter="onHoverReset()"
+                    onmouseleave="offHoverReset()" onclick="reset()" />
+                <span class="vertical-line"></span>
+                <img id="power_glow" src="./Images/btn-Glow/p10011.png" class="power_glow">
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./index.js"></script>
+<script src="./timer.js"></script>
+<script src="./popup.js"></script>
+<script src="./scaling.js"></script>
+<script src="./glow.js"></script>
+
+
+</html>

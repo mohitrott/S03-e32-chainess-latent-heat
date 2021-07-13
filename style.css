@@ -1,0 +1,561 @@
+body {
+  background-color: rgb(255, 255, 255);
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;
+  font-family: Myriad Pro;
+}
+@font-face {
+  font-family: Myriad Pro;
+  src: url('./fonts/MYRIADPRO-SEMIBOLD.OTF');
+  font-weight: bold;
+}  
+@font-face {
+  font-family: Myriad Pro Light;
+  src: url('./fonts/MYRIADPRO-REGULAR.OTF');
+  font-weight: bold;
+}  
+
+@font-face {
+  font-family: Dited;
+  src: url('./fonts/dited/Dited.otf');
+  font-weight: normal;
+} 
+
+#wrapper {
+  margin: 0px auto;
+  background: url("./Images/Bg_1.png") no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  flex-wrap: nowrap;
+}
+
+.disable-dbl-tap-zoom {
+  touch-action: manipulation;
+}
+
+.container-fluid {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.top-buttons {
+  display: flex;
+  position: absolute;
+  top: 21px;
+  right: 20px;
+  box-sizing: border-box;
+  z-index: 9999;
+}
+.top-b,
+.top-b1 {
+  margin: 3px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.top-b:hover {
+  appearance: none;
+  height: 34px;
+  background-repeat: no-repeat;
+  z-index: 5;
+}
+
+.top-show {
+  display: flex;
+  width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.activity___top{
+  display: block;
+  position: relative;
+  top: 15px;
+  width: 965px;
+  height: 577px;
+  left: 30px;
+}
+
+.timer{
+  width: 130px;
+  position: relative;
+  bottom: 180px;
+  left: 50px;
+}
+
+#timerText{
+  position: absolute;
+  width: 71px;
+  height: 37px;
+  left: 79px;
+  /* background-color: aqua; */
+  top: 115px;
+  align-items: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  font-size: 21px;
+  font-family: Dited;
+}
+
+.machine{
+  width: 54%;
+  position: relative;
+  top: 88px;
+  right: 111px;
+}
+
+#machineText{
+  position: absolute;
+  width: 105px;
+  height: 81px;
+  /* background-color: rgb(19, 75, 75); */
+  top: 225px;
+  left: 241px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 29px;
+  font-family: Dited;
+  color: rgb(44, 44, 44);
+}
+
+.beaker1{
+  width: 180px;
+  top: 85px;
+  position: relative;
+  right: 158px;
+  z-index: 2;
+}
+
+#B1Text{
+  position: absolute;
+  width: 55px;
+  height: 20px;
+  /* background-color: rgb(37, 233, 96); */
+  left: 615px;
+  z-index: 2;
+  top: 462px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 21px;
+  font-family: Dited;
+}
+
+.beaker2{
+  width: 204px;
+  right: 60px;
+  position: absolute;
+  top: 83px;
+  z-index: 2;
+}
+
+#B2Text{
+  position: absolute;
+  width: 55px;
+  height: 20px;
+  /* background-color: rgb(37, 233, 96); */
+  left: 839px;
+  z-index: 2;
+  top: 462px;
+  display: flex;
+  justify-content: flex-end;
+  font-size: 21px;
+  font-family: Dited;
+  color: rgb(44, 44, 44);
+}
+
+.ice1{
+  right: 76px;
+  position: relative;
+  bottom: 192px;
+  z-index: 1;
+  
+}
+
+.ice2{
+  position: relative;
+  bottom: 283px;
+  left: 544px;
+  z-index: 1;
+}
+
+.water{
+    position: absolute;
+    width: 105px;
+    height: 57px;
+    left: 539px;
+    top: 350px;
+    z-index: 10;  
+}
+
+.waterlevelBreakerB{
+  position: absolute;
+  width: 105px;
+  height: 57px;
+  left: 761px;
+  top: 350px;
+  z-index: 10;  
+}
+
+.resetBtn{
+  z-index: 9997;
+  cursor: pointer;
+}
+
+.powerOnBtn{
+  display: block;
+  z-index: 9997;
+}
+
+.powerOffBtn{
+  display: none;
+  z-index: 9997;
+}
+.powerOnBtn:hover{
+  cursor: pointer;
+}
+
+.powerOffBtn:hover{
+ cursor: pointer;
+}
+
+
+.mask{
+  display: none;
+  height: 37px;
+  /* background-color: rgb(255, 255, 255); */
+  width: 91px;
+  z-index: 999;
+}
+
+.textT{
+  top: 28px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  left: 90px;
+  font-family: Myriad Pro;
+}
+
+.textJ1{
+  top: 140px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  left: 250px;
+  font-family: Myriad Pro;
+}
+
+.textJ2{
+  top: 415px;
+  position: absolute;
+  font-size: 20px;
+  font-weight: 600;
+  left: 35px;
+  font-family: Myriad Pro;
+}
+
+.textB1{
+  position: absolute;
+  top: 80px;
+  left: 455px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Myriad Pro;
+}
+
+.textB2{
+  position: absolute;
+  position: absolute;
+  top: 70px;
+  left: 605px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Myriad Pro;
+}
+
+.textB3{
+  position: absolute;
+  top: 253px;
+  left: 603px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Myriad Pro;
+}
+
+.textB4{
+  position: absolute;
+  top: 253px;
+  left: 827px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Myriad Pro;
+}
+
+.textB5{
+  position: absolute;
+  top: 519px;
+  left: 673px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  font-family: Myriad Pro;
+}
+
+.intro-container {
+  width: 99%;
+  height: 92%;
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  z-index: 9998;
+  /* left: 25px; */
+}
+
+.intro-image {
+  position: absolute;
+  top: 50%;
+  transform: translate(0%, -50%);
+  box-sizing: border-box;
+  z-index: 9990;
+}
+
+.hideThis {
+  display: none !important;
+}
+.units{
+  float: right;
+  margin-right: 60px;
+}
+
+.lowerValues{
+  /* float: right; */
+  margin-left: 56px;
+}
+.lowerValues1{
+  /* float: right; */
+  margin-left: 63px;
+}
+
+/* #final{
+  float: right;
+  margin-right: 70px;
+} */
+
+
+
+.vertical-line{
+
+  display: block;
+  position: absolute;
+  border-left: 1px solid #488c97;
+  margin: 0 10px;
+  height: 80px;
+  left: 869px;
+}
+
+.startBox{
+  position: absolute;
+  width: 107%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9996;
+}
+
+#pop1{
+  display: block;
+  height: 164px;
+  width: 508px;
+}
+
+#pop2{
+  display: none;
+  height: 164px;
+  width: 508px;
+}
+
+#countdown{
+  display: block;
+  position: absolute;
+  font-size: 26px;
+  z-index: 9997;
+  top: 383px;
+  left: 528px;
+  font-family: Myriad Pro Light;
+  color: white;
+  /* transform: translate(-20%, -10%); */
+  height: 32px;
+  width: 29px;
+  text-align: center;
+}
+
+.closeBox{
+  position: absolute;
+  width: 107%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9996;
+}
+
+#popoff{
+  display: none;
+  height: 164px;
+  width: 508px;
+}
+
+#popWait{
+  display: none;
+  height: 164px;
+  width: 508px;
+}
+
+.line1{
+  position: absolute;
+  top: 499px;
+  left: 633px;
+  width: 33px;
+}
+
+.line2{
+  position: absolute;
+  top: 499px;
+  left: 739px;
+  width: 33px;
+}
+#intro-text{
+  position: absolute;
+    top: 208px;
+    z-index: 9999;
+    font-size: 23px;
+    color: #020272;
+    font-weight: 600;
+    left: 174px;
+}
+#intro-text1{
+  position: absolute;
+  top: 319px;
+  z-index: 9999;
+  font-size: 21px;
+  color: black;
+  /* font-weight: 600; */
+  left: 206px;
+}
+#intro-text2{
+  position: absolute;
+  top: 360px;
+  z-index: 9999;
+  font-size: 21px;
+  color: black;
+  left: 204px;
+}
+#intro-text3{
+  position: absolute;
+  top: 405px;
+  z-index: 9999;
+  font-size: 21px;
+  color: black;
+  left: 206px;
+}
+#heading{
+  left: -717px;
+  position: absolute;
+  background: linear-gradient( #61dcdb 0%,#009278 70%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 62px;
+  margin-top: -17px;
+  font-size: 28px;
+  filter: drop-shadow(0px 3px #b2b5b5);
+  font-weight: bold;
+}
+
+
+
+.activity___bottom{
+  display: grid;
+  grid-template-columns: 430px 430px 58px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 25px;
+  width: 100%;
+  height: 100px;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 20px;
+  font-family: Myriad Pro;
+}
+
+
+.power_glow
+{
+display: block;
+position: absolute;
+top: -5px;
+left: 901px;
+width: 115px;
+}
+
+#drop1{
+  top: 200px;
+  left: 587px;
+  position: absolute;
+  z-index: 2;
+  width: 9px;
+}
+#drop2{
+  top: 200px;
+  left: 811px;
+  position: absolute;
+  z-index: 2;
+  width: 9px;
+}
+
+
+/* ................................ */
+
+
+@keyframes movingTopToBottom {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+.waterDropping1 {
+  animation: movingTopToBottom 0.7s ease infinite;
+  -webkit-animation: movingTopToBottom ease 0.7s infinite;
+  position: absolute;
+}
+@keyframes movingTopToBottom1 {
+  0% {
+    top: 50px;
+  }
+  100% {
+    top: 200px;
+  }
+}
+.waterDropping2 {
+  animation: movingTopToBottom1 1s ease infinite;
+  -webkit-animation: movingTopToBottom1 ease 1s infinite;
+  position: absolute;
+}
+
+.paused {
+  -webkit-animation-play-state: paused !important;
+  -moz-animation-play-state: paused !important;
+  -o-animation-play-state: paused !important; 
+  animation-play-state: paused !important;
+}
