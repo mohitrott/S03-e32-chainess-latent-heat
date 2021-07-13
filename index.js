@@ -38,19 +38,23 @@ function offHoverReset() {
 }
 
 function onHoverPowerOn() {
-  $(".powerOnBtn").attr("src", "./Images/Power_on_highlight.png");
+  $("#powerOnIn").text('開啓電源');
+  $("#powerOnIn").css("color", "#b9009c");
 }
 
 function offHoverPowerOn() {
-  $(".powerOnBtn").attr("src", "./Images/Power_on.png");
+  $("#powerOnIn").text('開啓電源');
+  $("#powerOnIn").css("color", "#65989a");
 }
 
 function onHoverPowerOff() {
-  $(".powerOffBtn").attr("src", "./Images/Power_off-hover.png");
+  $("#powerOffIn").text('Power Off');
+  $("#powerOffIn").css("color", "#b9009c");
 }
 
 function offHoverPowerOff() {
-  $(".powerOffBtn").attr("src", "./Images/Power_off.png");
+  $("#powerOffIn").text('Power Off');
+  $("#powerOffIn").css("color", "#65989a");
 }
 
 function onHoverpopup() {
@@ -76,7 +80,9 @@ function powerOn() {
   // document.getElementById('pop2').style.display='block'
   document.getElementById("power_glow").style.display = "none";
   document.getElementById("powerOn").style.display = "none";
+  document.getElementById("powerOnIn").style.display = "none";
   document.getElementById("powerOff").style.display = "block";
+  document.getElementById("powerOffIn").style.display = "block";
   document.getElementById("powerOff").style.opacity = "0.5";
   document.getElementById("powerOff").style.pointerEvents = "none";
   powerOnTimeOutNew = setTimeout(() => {
@@ -131,6 +137,7 @@ function powerOff() {
 
   document.getElementById("power_glow").style.display = "none";
   document.getElementById("powerOff").style.display = "none";
+  document.getElementById("powerOffIn").style.display = "none";
   document.getElementById("powerOn").style.display = "none";
   document.getElementById("masks").style.display = "block";
   clearTimeout(powerOnTimeOut);

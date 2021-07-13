@@ -18,9 +18,10 @@
 <body class="disable-dbl-tap-zoom">
     <div id="wrapper" style="font-family: 'Myriad-pro-bold';">
         <div class="startBox" id="boxy">
-            <img id="pop1" src="./Images/Pop1.png" alt="">
+            <img id="pop1" src="./Images/Pop1.png" alt=""><span id="pop1Span">碎冰正在溶解。<br>
+                請開啓電源，進行實驗。</span></img>
             <!-- <img id="circle" src="./Images/Pop_circle.png"> -->
-            <img id="pop2" src="./Images/pop_on.png" alt="">
+            <img id="pop2" src="./Images/Pop1pp.png" alt=""><span id="pop2Span">電源自動開啓。</span></img>
         </div>
         <div class="closeBox" id="boxyClose">
             <img id="popoff" src="./Images/pop_off.png" alt="">
@@ -103,10 +104,12 @@
                         class="units"> kg</span></div>
                 <div class='mask' id='masks'></div>
                 <input type="image" class="powerOnBtn" tabindex="3" value="power on" id="powerOn" src="./Images/Power_on.png" onmouseenter="onHoverPowerOn()"
-                    onmouseleave="offHoverPowerOn()" onclick="powerOn()">
-                <img class="powerOffBtn" tabindex="6" id="powerOff" src="./Images/Power_off.png" onmouseenter="onHoverPowerOff()"
-                    onmouseleave="offHoverPowerOff()" onclick="powerOff()">
-                <div class="about">焦耳計的最後讀數 &nbsp; = <span class="lowerValues1" id="finalJ"> </span><span
+                    onmouseleave="offHoverPowerOn()" onclick="powerOn()"><span id="powerOnIn" onmouseenter="onHoverPowerOn()"
+                    onmouseleave="offHoverPowerOn()" onclick="powerOn()">開啓電源</span></input>
+                <img class="powerOffBtn" tabindex="6" id="powerOff" src="./Images/Power_on.png" onmouseenter="onHoverPowerOff()"
+                    onmouseleave="offHoverPowerOff()" onclick="powerOff()"><span id="powerOffIn" onmouseenter="onHoverPowerOff()"
+                    onmouseleave="offHoverPowerOff()" onclick="powerOff()">Power Off</span></img>
+                <div class="about">焦耳計的最後讀數&nbsp;= <span class="lowerValues1" id="finalJ"> </span><span
                         class="units"> J</span></div>
                 <div class="about">燒杯 <span style="font-style: italic;">B </span> 中水的質量  = <span class="lowerValues" id="massB2"> </span><span
                         class="units">kg</span></div>

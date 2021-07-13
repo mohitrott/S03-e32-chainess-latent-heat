@@ -381,6 +381,7 @@ body {
   display: none;
   height: 164px;
   width: 508px;
+
 }
 
 #countdown{
@@ -558,4 +559,37 @@ width: 115px;
   -moz-animation-play-state: paused !important;
   -o-animation-play-state: paused !important; 
   animation-play-state: paused !important;
+}
+#powerOnIn{
+  position: absolute;
+  right: 31px;
+  top: 10px;
+  z-index: 9999;
+  font-size: 18px;
+  color: #65989a;
+}
+#powerOffIn{
+  position: absolute;
+  right: 31px;
+  top: 10px;
+  z-index: 9999;
+  font-size: 18px;
+  color: #65989a;
+  display: none;
+}
+#pop2Span{
+  position: absolute;
+  font-size: 18px;
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+#pop1Span{
+  position: absolute;
+  font-size: 18px;
+  font-weight: 600;
+  top: 42%;
+  text-align: center;
 }

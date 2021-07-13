@@ -7,7 +7,9 @@ function start(){
       clearInterval(downloadTimer);
       document.getElementById("countdown").style.display = "none"
       document.getElementById('pop1').style.display='none'
+      document.getElementById('pop1Span').style.display='none'
       document.getElementById('pop2').style.display='block'
+      document.getElementById('pop2Span').style.display='block'
       setTimeout(hidePopup, 1500);
       powerOn();
       document.getElementById("initialJ").innerHTML = initialReading;
@@ -29,7 +31,9 @@ function resetPopup(){
   // document.getElementById("machineText").innerHTML = initialReading + " J";
   document.getElementById('boxy').style.visibility='visible';
   document.getElementById('pop1').style.display='block';
+  document.getElementById('pop1Span').style.display='block';
   document.getElementById('pop2').style.display='none';
+  document.getElementById('pop2Span').style.display='block'
   timeleft = 10;
   clearInterval(downloadTimer);
   downloadTimer = setInterval(start, 1000);
