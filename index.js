@@ -48,12 +48,12 @@ function offHoverPowerOn() {
 }
 
 function onHoverPowerOff() {
-  $("#powerOffIn").text('Power Off');
+  $("#powerOffIn").text('關閉電源。');
   $("#powerOffIn").css("color", "#b9009c");
 }
 
 function offHoverPowerOff() {
-  $("#powerOffIn").text('Power Off');
+  $("#powerOffIn").text('關閉電源。');
   $("#powerOffIn").css("color", "#65989a");
 }
 
@@ -74,6 +74,7 @@ function powerOn() {
   document.getElementById("be1").src = "./Images/B1_Heat_outwire.png";
   document.getElementById("countdown").style.display = "none";
   document.getElementById("pop1").style.display = "none";
+  document.getElementById("pop1Span").style.display = "none";
   clearInterval(downloadTimer);
   document.getElementById("initialJ").innerHTML = initialReading;
   document.getElementById("machineText").innerHTML = initialReading + " J";
@@ -97,11 +98,14 @@ function powerOn() {
   }, 1000);
   powerOnTimeOut = setTimeout(() => {
     document.getElementById("popoff").style.display = "block";
+    document.getElementById("popoffSpan").style.display = "block";
     powerOff();
   clearInterval(timerId);
   setTimeout(() => {
     document.getElementById("popoff").style.display = "none";
+    document.getElementById("popoffSpan").style.display = "none";
     document.getElementById("popWait").style.display = "block";
+    document.getElementById("popWaitSpan").style.display = "block";
   }, 1500);
   }, 20000);
   clearInterval(counterInterval);
@@ -117,6 +121,7 @@ function powerOff() {
   clearInterval(counterInterval);
   if(seconds < 19){
     document.getElementById("popWait").style.display = "block";
+    document.getElementById("popWaitSpan").style.display = "block";
   }
   powerOffTimeOut = setTimeout(() => {
     document.getElementById("massB1").innerHTML = (Math.round(mA) / 1000).toFixed(3);
@@ -133,6 +138,7 @@ function powerOff() {
   }, 2000);
   setTimeout(() => {
     document.getElementById("popWait").style.display = "none";
+    document.getElementById("popWaitSpan").style.display = "none";
   }, 3500);
 
   document.getElementById("power_glow").style.display = "none";
@@ -179,7 +185,9 @@ function resetLowerValues() {
   loop2 = 1;
   num = 10;
   document.getElementById("popWait").style.display = "none";
+  document.getElementById("popWaitSpan").style.display = "none";
   document.getElementById("popoff").style.display = "none";
+  document.getElementById("popoffSpan").style.display = "none";
   document.getElementById("be1").src = "./Images/B1_outHeat_outwire.png";
   document.getElementById("d1").classList.remove("paused");
   document.getElementById("d1").classList.remove("hideThis");

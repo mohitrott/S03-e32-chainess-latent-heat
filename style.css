@@ -570,7 +570,7 @@ width: 115px;
 }
 #powerOffIn{
   position: absolute;
-  right: 31px;
+  right: 15px;
   top: 10px;
   z-index: 9999;
   font-size: 18px;
@@ -592,4 +592,22 @@ width: 115px;
   font-weight: 600;
   top: 42%;
   text-align: center;
+}
+#popoffSpan{
+  position: absolute;
+  font-size: 18px; 
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+}
+#popWaitSpan{
+  font-weight: 600;
+  position: absolute;
+  font-size: 18px; 
+  display: none;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }

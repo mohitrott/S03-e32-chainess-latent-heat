@@ -33,7 +33,7 @@ function resetPopup(){
   document.getElementById('pop1').style.display='block';
   document.getElementById('pop1Span').style.display='block';
   document.getElementById('pop2').style.display='none';
-  document.getElementById('pop2Span').style.display='block'
+  document.getElementById('pop2Span').style.display='none';
   timeleft = 10;
   clearInterval(downloadTimer);
   downloadTimer = setInterval(start, 1000);
