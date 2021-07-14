@@ -48,12 +48,12 @@ function offHoverPowerOn() {
 }
 
 function onHoverPowerOff() {
-  $("#powerOffIn").text('關閉電源。');
+  $("#powerOffIn").text('關閉電源');
   $("#powerOffIn").css("color", "#b9009c");
 }
 
 function offHoverPowerOff() {
-  $("#powerOffIn").text('關閉電源。');
+  $("#powerOffIn").text('關閉電源');
   $("#powerOffIn").css("color", "#65989a");
 }
 
@@ -145,6 +145,7 @@ function powerOff() {
   document.getElementById("powerOff").style.display = "none";
   document.getElementById("powerOffIn").style.display = "none";
   document.getElementById("powerOn").style.display = "none";
+  document.getElementById("powerOnIn").style.display = "none";
   document.getElementById("masks").style.display = "block";
   clearTimeout(powerOnTimeOut);
   clearTimeout(powerOnTimeOutNew);
@@ -198,7 +199,9 @@ function resetLowerValues() {
   document.getElementById("machineText").innerHTML = initialReading + " J";
   document.getElementById("power_glow").style.display = "block";
   document.getElementById("powerOn").style.display = "block";
+  document.getElementById("powerOnIn").style.display = "block";
   document.getElementById("powerOff").style.display = "none";
+  document.getElementById("powerOffIn").style.display = "none";
   document.getElementById("masks").style.display = "none";
   document.getElementById("initialJ").innerHTML = "";
   document.getElementById("massB1").innerHTML = "";
