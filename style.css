@@ -213,7 +213,7 @@ body {
   display: none;
   z-index: 9997;
 }
-.powerOnBtn:hover{
+ .powerOnBtn:hover{
   cursor: pointer;
 }
 
@@ -568,6 +568,13 @@ width: 115px;
   font-size: 18px;
   color: #65989a;
 }
+#powerOnIn:hover{
+cursor: pointer;
+}
+#powerOffIn{
+  cursor: pointer; 
+}
+
 #powerOffIn{
   position: absolute;
   right: 31px;

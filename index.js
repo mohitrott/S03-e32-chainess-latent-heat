@@ -85,10 +85,14 @@ function powerOn() {
   document.getElementById("powerOff").style.display = "block";
   document.getElementById("powerOffIn").style.display = "block";
   document.getElementById("powerOff").style.opacity = "0.5";
+  document.getElementById("powerOffIn").style.opacity = "0.5";
   document.getElementById("powerOff").style.pointerEvents = "none";
+  document.getElementById("powerOffIn").style.pointerEvents = "none";
   powerOnTimeOutNew = setTimeout(() => {
     document.getElementById("powerOff").style.opacity = "1";
+    document.getElementById("powerOffIn").style.opacity = "1";
     document.getElementById("powerOff").style.pointerEvents = "all";
+    document.getElementById("powerOffIn").style.pointerEvents = "all";
     document.getElementById("power_glow").style.display = "block";
     myLoadFunction();
   }, 3000);
